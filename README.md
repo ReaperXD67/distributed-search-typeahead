@@ -2,6 +2,12 @@
 
 A complete search typeahead system that returns the ten most popular prefix matches, records searches asynchronously, computes live trending queries, and distributes cached suggestions across independent Redis nodes with consistent hashing.
 
+## Project demo video
+
+[Watch the complete working demonstration](https://drive.google.com/file/d/1MpjkRs8duS4mZLpqcqrK3bg0dXgdk5ct/view?usp=sharing)
+
+The video demonstrates the running Docker containers, local application, typeahead suggestions, search submissions, trending searches, system metrics, and overall project flow.
+
 ![Search typeahead interface](docs/screenshots/home.png)
 
 ## What is included

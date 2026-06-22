@@ -16,6 +16,12 @@ This is deliberately more than a CRUD application. The project demonstrates the 
 - How to measure p95 latency, cache hit rate, database traffic, and write reduction.
 - How to expose all of this through a polished and accessible interface.
 
+## Project demonstration video
+
+[Watch the complete working project demonstration](https://drive.google.com/file/d/1MpjkRs8duS4mZLpqcqrK3bg0dXgdk5ct/view?usp=sharing)
+
+The video shows the six-container Docker environment, local application, ranked suggestions, search submission, trending searches, live metrics, and the overall working project.
+
 ## Assignment coverage
 
 | Requirement | Implementation |

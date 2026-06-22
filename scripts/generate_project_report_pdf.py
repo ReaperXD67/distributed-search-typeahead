@@ -26,6 +26,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "PROJECT_REPORT.md"
 OUTPUT = ROOT / "output" / "pdf" / "PROJECT_REPORT.pdf"
 SCREENSHOT = ROOT / "docs" / "screenshots" / "home.png"
+VIDEO_URL = "https://drive.google.com/file/d/1MpjkRs8duS4mZLpqcqrK3bg0dXgdk5ct/view?usp=sharing"
 
 INK = colors.HexColor("#111827")
 NAVY = colors.HexColor("#13294B")
@@ -109,6 +110,11 @@ class ArchitectureDiagram(Flowable):
 
 def inline_markup(text: str) -> str:
     text = text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+    text = re.sub(
+        r"\[([^\]]+)\]\((https?://[^)]+)\)",
+        r'<link href="\2" color="#0F9D8A"><u>\1</u></link>',
+        text,
+    )
     text = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", text)
     text = re.sub(r"`([^`]+)`", r'<font name="Courier">\1</font>', text)
     return text
@@ -315,6 +321,13 @@ def build() -> None:
         ["Course", "HLD101 Search Typeahead Assignment"],
         ["Prepared by", "Aman Kumar"],
         ["Repository", "github.com/ReaperXD67/distributed-search-typeahead"],
+        [
+            "Demo video",
+            Paragraph(
+                f'<link href="{VIDEO_URL}" color="#0F9D8A"><u>Watch project demonstration</u></link>',
+                styles["body"],
+            ),
+        ],
         ["Report date", "22 June 2026"],
     ], colWidths=[32 * mm, 118 * mm], hAlign="CENTER")
     metadata.setStyle(TableStyle([

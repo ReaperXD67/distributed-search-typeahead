@@ -2,6 +2,7 @@
 
 - **Course:** HLD101 Search Typeahead Assignment
 - **Repository:** <https://github.com/ReaperXD67/distributed-search-typeahead>
+- **Demo video:** [Watch the working project demonstration](https://drive.google.com/file/d/1MpjkRs8duS4mZLpqcqrK3bg0dXgdk5ct/view?usp=sharing)
 - **Prepared by:** Aman Kumar
 - **Report date:** 22 June 2026
 
@@ -10,6 +11,12 @@
 Suggest is a full-stack search typeahead application built over a reproducible dataset of 100,000 unique queries. While a user types, the application returns up to ten matching queries ordered by popularity. Search submissions immediately update a recency-weighted trending view and are stored in a durable Redis Stream. A background worker aggregates repeated submissions before updating PostgreSQL, reducing database write pressure. Suggestion results are cached across three independent Redis nodes using application-level consistent hashing with virtual nodes and clockwise failover.
 
 The production-style local environment contains six Docker containers: frontend, backend, PostgreSQL, and three Redis nodes. The project includes a responsive React interface, FastAPI/OpenAPI documentation, health and metrics endpoints, automated unit tests, a complete-stack smoke test, GitHub Actions CI, performance measurements, and failure-testing evidence.
+
+## Project Demonstration Video
+
+[Watch the complete working project demonstration](https://drive.google.com/file/d/1MpjkRs8duS4mZLpqcqrK3bg0dXgdk5ct/view?usp=sharing)
+
+The recording shows the application running on localhost together with the Docker container topology and the main user and system-design flows.
 
 ## 1. Architecture Diagram and Explanation
 
