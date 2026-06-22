@@ -1,9 +1,9 @@
 # Suggest: Distributed Search Typeahead System
 
-**Course:** HLD101 Search Typeahead Assignment  
-**Repository:** <https://github.com/ReaperXD67/distributed-search-typeahead>  
-**Prepared by:** Aman Kumar  
-**Report date:** 22 June 2026
+- **Course:** HLD101 Search Typeahead Assignment
+- **Repository:** <https://github.com/ReaperXD67/distributed-search-typeahead>
+- **Prepared by:** Aman Kumar
+- **Report date:** 22 June 2026
 
 ## Executive Summary
 
@@ -351,4 +351,3 @@ docker compose down
 ## Conclusion
 
 The system satisfies the complete assignment while remaining easy to run and explain. The read path uses distributed cache-aside access for low latency. The write path uses durable, idempotent batching to reduce PostgreSQL pressure. Trending searches remain immediately visible, failures are observable, and all important behavior is supported by tests and measurements. The architecture can scale horizontally and has clear next steps - precomputed prefix top-K data, managed replicated storage, centralized metrics, service discovery, and regional caches - for substantially larger production traffic.
-
